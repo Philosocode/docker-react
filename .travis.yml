@@ -8,4 +8,4 @@ before_install:
   - docker build -t philosocode/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run philosocode/docker-react npm run test -- --coverage
+  - docker run -e CI=true philosocode/docker-react npm run test -- --coverage
