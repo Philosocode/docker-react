@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          DO OR DO NOT, THERE IS NO TRY
         </a>
       </header>
     </div>
