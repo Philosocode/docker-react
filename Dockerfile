@@ -12,4 +12,6 @@ RUN npm run build
 
 # Starting another block
 FROM nginx
+# Expose Port 80. Needed for AWS EB
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
