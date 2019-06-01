@@ -9,3 +9,19 @@ before_install:
 
 script:
   - docker run -e CI=true philosocode/docker-react npm run test -- --coverage
+
+deploy:
+  # DockerReact-env.qiq35bee38.ca-central-1.elasticbeanstalk.com 
+  provider: elasticbeanstalk
+  region: "ca-central-1"
+  app: "docker-react"
+  environment: "DockerReact-env"
+  # S3 -> Find the bucket name
+  bucket_name: "elasticbeanstalk-ca-central-1-509060334628"
+  # Use app name
+  bucket_path: "docker-react"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
