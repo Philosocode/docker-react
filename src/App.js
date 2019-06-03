@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          DO OR DO NOT, THERE IS NO TRY
+          IT'S FEATURE TIME
         </a>
       </header>
     </div>
